@@ -27,4 +27,4 @@ run \`chmod a+x fitbit_goal.rb`
 
 To add it as a daily cron, add some version of the following line to your crontab:  
   
-0 * * * * cd PATH_TO_THE_DIRECTORY_FOR_REPOSITORY; ./fitbit_goal.rb
+*/10 * * * * cd PATH_TO_THE_DIRECTORY_FOR_REPOSITORY; ./fitbit_goal.rb
