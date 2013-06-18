@@ -5,10 +5,6 @@ class FitbitGoal
     @type = 'steps'
   end
 
-  def config
-    @config ||= YAML.load_file('env.yml')
-  end
-
   def increment_daily_goal
     client.post "#{base_url}/activities/goals/daily.json?type=#{@type}&value=#{old_daily_goal + @increment}",
                 {'Accept-Language' => 'en_US'}
@@ -25,7 +21,7 @@ class FitbitGoal
     end
 
     def consumer
-      @consumer ||= OAuth::Consumer.new config['consumer_key'], config['consumer_secret'], site: 'http://api.fitbit.com', request_token_path: '/oauth/request_token'
+      @consumer ||= OAuth::Consumer.new ENV['FITBIT_CONSUMER_KEY'], ENV['FITBIT_CONSUMER_SECRET'], site: 'http://api.fitbit.com', request_token_path: '/oauth/request_token'
     end
 
     def get_client_from_token_hash
