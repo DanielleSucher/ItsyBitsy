@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-FitbitNoodge::Application.config.secret_token = YAML.load_file('env.yml')['rails_secret_token']
+FitbitNoodge::Application.config.secret_token = ENV['RAILS_SECRET_TOKEN']
