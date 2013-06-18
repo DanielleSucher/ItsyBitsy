@@ -1,17 +1,14 @@
-<div style="padding-left:200px;padding-right:200px;padding-top:20px;font-size:24px;">
-  <p>
-    Heya, <%= @user.name %>!
-  </p>
+<p>
+  Heya, <%= @user.name %>!
+</p>
 
-  <p id="increment" style="margin-top:50px;">
-    We're going to nudge your Fitbit steps goal along by increasing your daily goal by <span data-var="steps" class="TKAdjustableNumber" data-min="0" data-max="1000"> steps</span> each day. Go you, for pushing yourself like this!
-  </p>
+<p id="increment" style="margin-top:50px;">
+  We're going to nudge your Fitbit steps goal along by increasing your daily goal by <span data-var="steps" class="TKAdjustableNumber" data-min="0" data-max="1000"> steps</span> each day. Go you, for pushing yourself like this!
+</p>
 
-  <p style="font-size:16px;margin-top:50px;">
-    (If you feel like taking a break from incrementing your goal, you can go ahead and <%= link_to 'cancel with us for now', user_path(@user), method: :delete %> if you like. This will not affect your Fitbit account at all, and is perfectly safe!)
-  </p>
-
-</div>
+<p style="font-size:16px;margin-top:50px;">
+  (If you feel like taking a break from incrementing your goal, you can go ahead and <%= link_to 'cancel with us for now', user_path(@user), method: :delete %> if you like. This will not affect your Fitbit account at all, and is perfectly safe!)
+</p>
 
 <script type="text/javascript">
   function setUpTangle() {

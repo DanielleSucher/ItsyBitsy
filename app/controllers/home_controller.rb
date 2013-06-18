@@ -1,7 +1,14 @@
 class HomeController < ApplicationController
 
+  def about
+  end
+
   def index
-    redirect_to user_path(current_user) if current_user.present?
+    if current_user.present?
+      redirect_to user_path(current_user)
+    else
+      render action: 'about'
+    end
   end
 
 end
