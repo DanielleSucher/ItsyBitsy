@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require Tangle
+//= require TangleKit/TangleKit
+//= require TangleKit/mootools
+//= require TangleKit/sprintf
+//= require TangleKit/BVTouchable
 //= require_tree .
