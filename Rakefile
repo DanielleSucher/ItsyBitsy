@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FitbitGoalIncrementer::Application.load_tasks
+FitbitNoodge::Application.load_tasks

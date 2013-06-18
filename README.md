@@ -1,6 +1,6 @@
 **What is this?**
 
-Fitbit Goal Incrementer does exactly what it says on the tin - it's a script you can set up to increment your Fitbit goal(s) each day.
+Fitbit Noodge does exactly what it says on the tin - it nudges you by incrementing your Fitbit goal(s) each day.
 
 By default, it's set up to increment your steps goal by 10 steps per day. Assuming you're starting off with the default goal of 10,000 steps/day, tomorrow your goal would be raised to 10,010 steps, and two days from now it would be 10,020 steps, &c.
 
