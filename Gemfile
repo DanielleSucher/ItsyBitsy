@@ -3,10 +3,10 @@ ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 
-gem 'sqlite3'
-
 gem 'oauth'
 gem 'omniauth-fitbit'
+
+gem 'jquery-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -14,6 +14,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development do
+  gem 'sqlite3'
+end
 
-gem 'debugger'
+group :production do
+  gem 'pg'
+end
