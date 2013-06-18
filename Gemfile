@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 
 gem 'oauth'
+gem 'omniauth-fitbit'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
