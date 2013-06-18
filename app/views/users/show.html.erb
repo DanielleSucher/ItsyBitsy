@@ -16,7 +16,7 @@
 
     var tangle = new Tangle(element, {
       initialize: function () {
-        this.steps = <%= @user.goal_increment || 10 %>;
+        this.steps = <%= @user.goal_increment %>;
       },
       update: function () {}
     });

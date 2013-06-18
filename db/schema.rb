@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618052815) do
+ActiveRecord::Schema.define(:version => 20130618150447) do
 
   create_table "users", :force => true do |t|
     t.string   "email"
-    t.integer  "goal_increment"
+    t.integer  "goal_increment",     :default => 10
     t.string   "provider"
     t.string   "uid"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "oauth_token"
     t.string   "oauth_token_secret"
     t.string   "name"

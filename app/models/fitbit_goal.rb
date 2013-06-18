@@ -1,7 +1,7 @@
 class FitbitGoal
   def initialize(user)
     @user = user
-    @increment = @user.goal_increment || 10
+    @increment = @user.goal_increment
     @type = 'steps'
   end
 
