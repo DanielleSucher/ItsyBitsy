@@ -1,0 +1,7 @@
+<div id="user_nav">
+  <% if current_user %>
+    <%= link_to "Sign out of Fitbit", signout_path %>
+  <% else %>
+    <%= link_to "Sign in with Fitbit", "/auth/fitbit" %>
+  <% end %>
+</div>
