@@ -12,3 +12,61 @@
  *= require TangleKit
  *= require_tree .
  */
+
+body {
+  font-family: 'Open Sans',sans-serif;
+}
+
+#user-nav {
+  float: right;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+#title {
+  clear: both;
+  margin: auto;
+  text-align: center;
+  font-size: 48px;
+  font-family: 'Old Standard TT',serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+#main-content {
+  clear: both;
+  margin: auto;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: 24px;
+  text-indent: 40px;
+}
+
+#footer-text {
+  float: right;
+  font-size: 16px;
+  margin-right: 100px;
+  margin-top: 14px;
+}
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 50px;
+}
+.site-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+}

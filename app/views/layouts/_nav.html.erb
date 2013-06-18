@@ -1,4 +1,4 @@
-<div id="user_nav" style="float:right;margin-right:100px;margin-top:10px;">
+<div id="user-nav">
   <% if current_user %>
     <%= link_to "About", about_path %> | <%= link_to "Home", user_path(current_user) %> | <%= link_to "Sign out", signout_path %>
   <% else %>
