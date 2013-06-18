@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fitbit Goal Incrementer</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Fitbit Noodge</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,800" , :media => "all" %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Old+Standard+TT:700" , :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="font-family:'Open Sans',sans-serif;">
   <a href="https://github.com/DanielleSucher/FitbitGoalIncrementer"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
   <%= render 'layouts/nav' %>
-  <div id="main-content" style="clear:both;margin:auto;padding-left:200px;padding-right:200px;padding-top:20px;font-size:24px;">
+  <%= render 'layouts/title' %>
+  <div id="main-content" style="clear:both;margin:auto;padding-left:200px;padding-right:200px;font-size:24px;text-indent:40px;">
     <%= yield %>
   </div>
   <%= render 'layouts/footer' %>
