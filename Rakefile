@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FitbitNoodge::Application.load_tasks
+ItsyBitsy::Application.load_tasks
