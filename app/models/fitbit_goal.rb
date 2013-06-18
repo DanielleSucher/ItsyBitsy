@@ -1,6 +1,7 @@
 class FitbitGoal
   def initialize(user)
     @user = user
+    @fitbit_user_id = @user.uid
     @increment = @user.goal_increment
     @type = 'steps'
   end
@@ -13,7 +14,7 @@ class FitbitGoal
   private
 
     def base_url
-      "https://api.fitbit.com/1/user/#{config['user_id']}"
+      "https://api.fitbit.com/1/user/#{@fitbit_user_id}"
     end
 
     def client
