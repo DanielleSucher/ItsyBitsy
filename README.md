@@ -10,15 +10,12 @@ The point is to nudge yourself to keep pushing yourself more and more, and not g
 
 Clone this repository.
 
-Go to https://dev.fitbit.com/apps/new and register a new application. Make sure your application type is set to 'Desktop'.
+Go to https://dev.fitbit.com/apps/new and register a new application.
 
-Create a file called 'env.yml' in this project's directory, and set it up with the values from your new Fitbit application and your account:
-
-\---
-rails_secret_token: SECRET_TOKEN_FOR_YOUR_RAILS_APP
-consumer_key: YOUR_FITBIT_CONSUMER_KEY
-consumer_secret: YOUR_FITBIT_CONSUMER_SECRET
+Set the following environment variables: RAILS_SECRET_TOKEN, FITBIT_CONSUMER_KEY, and FITBIT_CONSUMER_SECRET.
 
 run \`bundle install`
 
-Carry on as per usual with a Rails app. The incrementing should be set up to take place as a daily cron.
+Set up a daily cron of Heroku scheduler to run \`rake increment_daily_goals`
+
+Carry on as per usual with a Rails app.

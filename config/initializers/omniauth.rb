@@ -1,5 +1,3 @@
-config = YAML.load_file('env.yml')
-
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :fitbit, config['consumer_key'], config['consumer_secret']
+  provider :fitbit, ENV['FITBIT_CONSUMER_KEY'], ENV['FITBIT_CONSUMER_SECRET']
 end
