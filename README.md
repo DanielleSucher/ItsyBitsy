@@ -18,14 +18,7 @@ Create a file called 'env.yml' in this project's directory, and set it up with t
 rails_secret_token: SECRET_TOKEN_FOR_YOUR_RAILS_APP
 consumer_key: YOUR_FITBIT_CONSUMER_KEY
 consumer_secret: YOUR_FITBIT_CONSUMER_SECRET
-user_id: YOUR_FITBIT_USER_ID
 
 run \`bundle install`
 
-run \`ruby fitbit_goal.rb` to go through the verification process and do your first goal increment.
-
-run \`chmod a+x fitbit_goal.rb`
-
-To add it as a daily cron, add some version of the following line to your crontab:
-
-*/10 * * * * . ~/.bash_profile; cd PATH_TO_THE_DIRECTORY_FOR_REPOSITORY; ./fitbit_goal.rb
+Carry on as per usual with a Rails app. The incrementing should be set up to take place as a daily cron.
