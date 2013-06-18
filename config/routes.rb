@@ -1,4 +1,4 @@
-FitbitGoalIncrementer::Application.routes.draw do
+FitbitNoodge::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:destroy, :show, :update]
 
