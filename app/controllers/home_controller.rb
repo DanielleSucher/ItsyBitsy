@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @user = current_user || User.new
+    redirect_to user_path(current_user) if current_user.present?
   end
 
 end
