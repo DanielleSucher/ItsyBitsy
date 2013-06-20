@@ -13,8 +13,8 @@ module Fitbit
       constantize(resource).new(client, base_url).get(args)
     end
 
-    def put(resource, args)
-      constantize(resource).new(client, base_url).put(args)
+    def post(resource, args)
+      constantize(resource).new(client, base_url).post(args)
     end
 
     private
@@ -24,7 +24,12 @@ module Fitbit
       end
 
       def constantize(resource)
-        Fitbit.const_get resource.to_s.split('_').map{|substring| substring.capitalize}.join
+        current_constant = Fitbit
+        strings_to_constantize = resource.to_s.split('_').map{|substring| substring.capitalize}
+        until strings_to_constantize.empty?
+          current_constant = current_constant.const_get strings_to_constantize.shift
+        end
+        current_constant
       end
 
       def get_client_from_token_hash
