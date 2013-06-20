@@ -1,13 +1,17 @@
 module Fitbit
-  module DailyGoal
-
-    def get_daily_goal(type)
-      response = JSON.parse client.get("#{base_url}/activities/goals/daily.json?type=#{type}").body
-      response['goals'][type].to_i
+  class DailyGoal
+    def initialize(client, base_url)
+      @client = client
+      @base_url = base_url
     end
 
-    def update_daily_goal(type, value)
-      client.post "#{base_url}/activities/goals/daily.json?type=#{type}&value=#{value}",
+    def get(args={type: nil})
+      response = JSON.parse @client.get("#{@base_url}/activities/goals/daily.json?type=#{args[:type]}").body
+      response['goals'][args[:type]].to_i
+    end
+
+    def put(args={type: nil, value: nil})
+      @client.post "#{@base_url}/activities/goals/daily.json?type=#{args[:type]}&value=#{args[:value]}",
                   {'Accept-Language' => 'en_US'}
     end
 

@@ -6,12 +6,12 @@ class FitbitGoal
   end
 
   def increment_daily_goal
-    @fitbit.update_daily_goal @type, old_daily_goal + @increment
+    @fitbit.put :daily_goal, type: @type, value: old_daily_goal + @increment
   end
 
   private
 
     def old_daily_goal
-      @fitbit.get_daily_goal @type
+      @fitbit.get :daily_goal, type: @type
     end
 end
